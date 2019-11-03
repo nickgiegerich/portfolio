@@ -6,20 +6,78 @@
  * Will update this once I know whether it works or not
  */
 
+ .mini-first-section  {
+  background-color: #E86F68;
+  transition: transform .2s; /* Animation */
+  width: 50px !important;
+  height: 100px;
+  border-radius: 57% 43% 73% 27% / 33% 45% 55% 67%;
+  box-shadow: 6px 21px 38px 0px #272324;
+  cursor: pointer;
+ }
  .first-section { 
     background-color: #E86F68;
     width: 100%;
-    height: 100%;
+    height:100%;
     border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
     box-shadow: 10px 10px 8px 10px #272324;
+    overflow: hidden;
+   
+ }
+ .mini-second-section  {
+  background-color: #C2B28F;
+  transition: transform .2s; /* Animation */
+  width: 50px !important;
+  height: 140px;
+  border-radius: 70% 30% 50% 50% / 42% 48% 52% 58%;
+  box-shadow: 6px 21px 38px 0px #272324;
+  cursor: pointer;
  }
 
  .second-section { 
     background-color: #C2B28F;
     width: 100%;
     height: 100%;
-    border-radius: 107% 69% 29% 36% / 40% 125% 106% 97%;
+    border-radius: 70% 30% 50% 50% / 42% 48% 52% 58%;
     box-shadow: 10px 10px 8px 10px #272324;
+ }
+
+ .mini-first-section:hover { 
+  transform: scale(1.03);
+ }
+ .mini-second-section:hover { 
+  transform: scale(1.03);
+ }
+ .mini-third-section:hover { 
+  transform: scale(1.03);
+ }
+
+ .mini-third-section  {
+  background-color: #45969b;
+  transition: transform .2s; /* Animation */
+  width: 50px !important;
+  height: 240px;
+  border-radius: 34% 66% 45% 55% / 67% 50% 50% 33%;
+  box-shadow: 6px 21px 38px 0px #272324;
+  cursor: pointer;
+ }
+
+ .third-section { 
+   background-color: #45969b;
+   width: 100%;
+   height: 100%;
+   border-radius: 80% 50% 80% 50% / 80% 90% 90% 80%;
+   box-shadow: 10px 10px 8px 10px #272324;
+ }
+
+ .mini-fourth-section { 
+  background-color: #45969b;
+  transition: transform .2s; /* Animation */
+  width: 213px !important;
+  height: 350px;
+  border-radius: 65% 35% 33% 67% / 49% 28% 72% 51%;
+  box-shadow: 6px 21px 38px 0px #272324;
+  cursor: pointer;
  }
 
  .headshot { 
@@ -48,6 +106,80 @@
     border: #83B799;
     border-style: solid; 
  }
+
+ .hide { 
+   display: none !important;
+ }
+
+ /* Icon 1 */
+
+#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span, #nav-icon2 span, #nav-icon3 span, #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #d3531a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1), #nav-icon2 span:nth-child(1), #nav-icon3 span:nth-child(1)   {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2), #nav-icon2 span:nth-child(2), #nav-icon3 span:nth-child(2)   {
+  top: 18px;
+}
+
+#nav-icon1 span:nth-child(3), #nav-icon2 span:nth-child(3), #nav-icon3 span:nth-child(3)  {
+  top: 36px;
+}
+
+#nav-icon1.closeme span:nth-child(1), #nav-icon2.closeme span:nth-child(1), #nav-icon3.closeme span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.closeme span:nth-child(2), #nav-icon2.closeme span:nth-child(2), #nav-icon3.closeme span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.closeme span:nth-child(3), #nav-icon2.closeme span:nth-child(3), #nav-icon3.closeme span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
 
 
 

@@ -11,6 +11,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}" ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -76,5 +78,24 @@
             @yield('content')
         </main>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#nav-icon1,#nav-icon2,#nav-icon3,#first-mini,#second-mini,#third-mini').click(function() {
+                var selector = $(this).data('selector');
+                $(selector).toggle("slow");
+                if(selector === '#first'){
+                    $('#first-mini').toggle("slow");
+                } else if(selector === '#second') { 
+                    $('#second-mini').toggle("slow");
+                } else if(selector === '#third') { 
+                    $('#third-mini').toggle("slow");
+                }
+    });
+            $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+                $(this).toggleClass('closeme');
+            });
+});
+    </script>
 </body>
 </html>
